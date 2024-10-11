@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="johniton">
+  <meta name="description" content="this page contains all the things im learning how to create in html.">
+  <title>MY FIRST WEBPAGE</title>
+  <!-- for modifying the title icon -->
+  <link rel="icon" href="IMG_20240720_232940.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+
+<body>
+  <!-- header is used to find out which is the heading part of the html file-->
+  <header>
+    <h1>Hello world!</h1>
+
+    <nav aria-label="primary navigation">
+      <ul>
+        <li><a href="#intro">intro</a></li>
+        <li><a href="#vacation">vacation</a></li>
+        <li><a href="#list">list</a></li>
+        <li><a href="#avoiding_places">places to avoid</a></li>
+        <li><a href="#to_the_links">some links</a></li>
+        <li><a href="#contact">Contact me</a></li>
+      </ul>
+    </nav>
+  </header>
+  <hr>
+
+  <!--there can only be one main-->
+  <main>
+    <!--we can use either "article" or "section" . common convection is article and section is just used for semantics-->
+    <article id="intro">
+
+      <h2>im ready to learn.</h2>
+
+      <p>This is my first webpage.</p>
+      <section>
+        <!-- alt is used for alternative for the picture and title comes when you hover the cursor-->
+        <img src="img/IMG_20240826_183417.jpg" alt="picture" title="im learning" width="300" height="300">
+
+        <h3>my daily schedule</h3>
+        <p>let me tell you...</p>
+      </section>
+    </article>
+
+    <hr>
+
+    <article id="vacation">
+      <h2>new vacation </h2>
+      <p>
+        <em>where do i want to go</em>
+        <br><strong>india or brazil</strong>
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;or europe or southasia
+        <br>another one
+        <br><abbr title="laughing out loud">lol</abbr>
+      </p>
+
+
+
+
+      <address>
+        flat f1 rishwa residency durgabhat ponda goa
+      </address>
+
+    </article>
+
+    <hr>
+
+    <article id="list">
+      <h2>LIST.</h2>
+      <br> a] ordered list
+
+      <!--if ol not present it will be unodered  list-->
+      <ol>
+        <li>hi my name is <abbr title="johniton">john</abbr></li>
+        <li>this is my first html program</li>
+        <li>nice to see you here</li>
+      </ol>
+      <br>b]unodered list
+      <ul>
+        <li>hi my name is <abbr title="johniton">john</abbr></li>
+        <li>this is my first html program</li>
+        <li>nice to see you here</li>
+      </ul>
+
+
+    </article>
+
+    <hr>
+    <figure>
+      <img src="img/Snapchat-2036336674.jpg" alt="smudge" width="300" height="300" loading="lazy">
+      <figcaption>
+        smudge and me
+      </figcaption>
+    </figure>
+    <article id="avoiding_places">
+      <h3>Places i want to avoid</h3>
+      <dl>
+        <dt>north pole</dt>
+        <dd>i hear this is <strong>cold</strong></dd>
+
+        <dt>mountain tops</dt>
+        <dd>this are also <strong>cold</strong></dd>
+      </dl>
+    </article>
+
+    <hr>
+    <h3>TABLE</h3>
+    <table>
+      <caption>MT TIME TABLE</caption>
+      <!--thead and tbody only for semantics-->
+      <thead>
+        <tr>
+          <th>&nbsp;</th>
+          <th scope="col">Time</th>
+          <th scope="col">Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Morning</th>
+          <td> <time datetime="08:00">8am</time> - <time datetime="11:00">11am</time> </td>
+          <td>
+            write code
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Afternoons</th>
+          <td> <time datetime="11:00">11am</time> - <time datetime="12:00">12pm</time> </td>
+          <td>
+            break
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Others</th>
+          <td rowspan="2"> All other times </td>
+          <td> Free time</td>
+        </tr>
+        <tr>
+          <th scope="row">night</th>
+          <td>sleep</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">the end</td>
+        </tr>
+      </tfoot>
+    </table>
+    <article id="to_the_links">
+      <h3>links</h3>
+      absolute reference <a href="https://social.mtdv.me/watch?v=vQ3YXrPghu">not rickroll</a>
+      <br>
+
+
+
+      relative reference <a href="about.html">nextpage</a>
+
+
+      <aside>
+        <!--details and summary work together-->
+        <details>
+          <summary>
+            click me for <mark>magic</mark>
+          </summary>
+          <p>MAGIC!!!</p>
+        </details>
+      </aside>
+
+    </article>
+
+    <hr>
+
+    <article id="contact">
+
+      <h2>contact me</h2>
+      <p>i d reallly like to hear from you</p>
+      <!--id shud match the 'for' in lable
+        required is used is the submittion is must
+        autofocus can be only on ONE element
+        the page will directly take you there
+      -->
+      <form action="https://httpbin.org/get" method="get">
+        <fieldset>
+          <legend>Personal Info</legend>
+          <p>
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="firstName" placeholder="eg:Jane" autocomplete="on" required
+              autofocus>
+          </p>
+          <p>
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="lastName" placeholder="eg:doe" autocomplete="on" required>
+          </p>
+          <p>
+            <label for="Password">PassWord:</label>
+            <input type="password" name="Password" id="Password" placeholder="eg:qwerty@123" required>
+          </p>
+          <p>
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone" placeholder="eg:1234567890" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+              required>
+          </p>
+          <p>
+            <label for="Decade">favourite Decade:</label>
+            <input type="number" name="Decade" id="Decade" min="1950" max="2030" step="10" value="1980" required>
+          </p>
+          <!--       <p>
+            <label for="Coffee">favourite coffee</label>
+            <select name="Coffee" id="Coffee" multiple size="5">
+              <optgroup label="coffees">
+                <option value="regular coffee">Regular Coffee</option>
+                <option value="iced coffee">Iced Coffee</option>
+              </optgroup>
+              <optgroup label="espresso">
+                <option value="latte">Latte</option>
+                <option value="cappuccinno" selected>Cappuccino </option>
+
+              </optgroup>
+
+            </select>
+          </p> -->
+          <p>
+            <label for="coffee">favourite coffee</label>
+            <input type="text" name="Coffee" id="coffee" list="coffee-list">
+            <datalist id="coffee-list">
+              <option value="regular coffee">
+              <option value="iced coffee">
+              <option value="latte">
+              <option value="cappuccinno">
+            </datalist>
+
+
+
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Whar is your favourite food</legend>
+          <p>
+            <input type="radio" name="food" id="tacos" value="tacos">
+            <label for="tacos">TACOS</label>
+          </p>
+          <p>
+            <input type="radio" name="food" id="pizza" value="pizza">
+            <label for="pizza">PIZZA</label>
+          </p>
+          <p>
+            <input type="radio" name="food" id="others" value="others">
+            <label for="others">others</label>
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Do You have pets</legend>
+          <p>
+            <input type="checkbox" name="pet" id="dog">
+            <label for="dog">DOG</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pet" id="cat">
+            <label for="cat">CATS</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pet" id="otherspet">
+            <label for="otherspet">OTHERS</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Send Me a Text</legend>
+          <label for="message">MESSAGE</label>
+          <br>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
+
+        </fieldset>
+        <br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="submit" formaction="https://httpbin.org/post" formmethod="post">POST</button>
+      </form>
+    </article>
+  </main>
+  <hr>
+  <footer>
+    <p>
+      &lt;&lt;&lt;&lt;&copy;<abbr title="johniton">john</abbr>
+      &gt;&gt;&gt;&gt;
+    </p>
+    <p><a href="#">back to top</a></p>
+
+  </footer>
+
+</body>
+
+
+</html>
