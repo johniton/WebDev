@@ -1,0 +1,63 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+table {
+  margin: 0 auto; /* Centers the table horizontally */
+}
+
+th,
+td,
+caption {
+  border: 1px solid #333;
+  font-family: "Courier New", Courier, monospace;
+  border-collapse: separate;
+  padding: 0.5rem;
+  text-align: center;
+}
+h2 {
+  padding: 1em;
+  background: yellow;
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+.beauty {
+  padding: 15%;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+nav {
+  border: 3px solid black;
+  font-size: 3em;
+  max-width: 600px;
+  border-radius: 2rem;
+}
+ul {
+  color: blue;
+  border: 2px black;
+  list-style-type: none;
+  line-height: 1.5;
+}
+
+li {
+  border-top: 3px solid black;
+}
+li a {
+  display: block;
+}
+li a,
+li a:visited {
+  text-decoration: none;
+}
+
+li a:hover,
+li a:focus {
+  background: black;
+  color: whitesmoke;
+  cursor: pointer;
+}
+li:last-child a {
+  border-radius: 0em 0em 2rem 2rem;
+}
